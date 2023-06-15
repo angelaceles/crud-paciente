@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Contacto</title>
+    <link rel="stylesheet" href="/editar.css">
+</head>
+<body>
+    <h1>Editar Contacto</h1>
+
+    <form class="edit-contact-form" action="/putPaciente/<%= paciente._id %>" method="POST" enctype="multipart/form-data">
+        <label for="idpaciente">Idpaciente:</label>
+        <input type="text" id="idpaciente" name="idpaciente" value="<%= paciente.idpaciente %>">
+
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" value="<%= paciente.name %>">
+      
+        <label for="lastname">Apellido:</label>
+        <input type="text" id="lastname" name="lastname" value="<%= paciente.lastname %>">
+      
+        <label for="sexo">Sexo:</label>
+        <input type="text" id="sexo" name="sexo" value="<%= paciente.sexo %>">
+      
+        <label for="especialidad">Especialidad:</label>
+        <select id="especialidad" name="especialidad" value="<%= paciente.especialidad %>">
+            <option value="Alergología">Alergología</option>
+            <option value="Dermatología">Dermatología</option>
+            <option value="Cardiología">Cardiología</option>
+            <option value="Nutrición">Nutrición</option>
+        </select>
+        <br>
+        <label for="image">Imagen:</label>
+        <input type="file" id="image" name="image">
+      
+        <img src="<%= paciente.image %>" alt="Imagen de paciente">
+      
+        <button type="submit">Guardar cambios</button>
+        <br>
+        <br>
+        <a href="/" class="btn-neon">
+            <span id="span1"></span>
+            <span id="span2"></span>
+            <span id="span3"></span>
+            <span id="span4"></span>
+            Regresar
+        </a>
+      </form>      
+</body>
+</html>

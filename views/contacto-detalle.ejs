@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Detalles del Paciente</title>
+    <link rel="stylesheet" href="/detalles.css">
+</head>
+<body>
+    <h1>Detalles del Paciente</h1>
+
+    <div class="contact-details">
+        <img class="contact-image" src="<%= paciente.image %>" alt="Imagen de paciente">
+        <p><strong>Idpaciente:</strong> <%= paciente.idpaciente %></p>
+        <p><strong>Apellido:</strong> <%= paciente.lastname %></p>
+        <p><strong>Nombre:</strong> <%= paciente.name %></p>
+        <p><strong>Sexo:</strong> <%= paciente.sexo %></p>
+        <p><strong>Especialidad:</strong> <%= paciente.especialidad.join(', ') %></p>
+    </div>
+    <br>   
+    <a href="/editar/<%= paciente._id %>" class="btn-neon">
+        <span id="span1"></span>
+        <span id="span2"></span>
+        <span id="span3"></span>
+        <span id="span4"></span>
+        Editar paciente
+    </a>
+    <a href="/contacto/eliminar/<%= paciente._id %>" class="btn-neon">
+        <span id="span1"></span>
+        <span id="span2"></span>
+        <span id="span3"></span>
+        <span id="span4"></span>
+        Eliminar paciente
+    </a>
+    <a href="/" class="btn-neon">
+        <span id="span1"></span>
+        <span id="span2"></span>
+        <span id="span3"></span>
+        <span id="span4"></span>
+        Regresar
+    </a>
+</body>
+</html>

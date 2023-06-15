@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Agregar Paciente</title>
+    <link rel="stylesheet" href="/agregar.css">
+</head>
+<body>
+    <h1>Agregar Paciente</h1>
+    <form class="add-contact-form" action="/api/v1/add" method="POST" enctype="multipart/form-data">
+        <label for="idpaciente">Idpaciente:</label>
+        <input type="text" id="idpaciente" name="idpaciente">
+            
+        <label for="lastname">Apellido:</label>
+        <input type="text" id="lastname" name="lastname">
+
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name">
+
+        <label for="sexo">Sexo:</label>
+        <input type="text" id="sexo" name="sexo">
+        
+        <label for="especialidad">Especialidad:</label>
+        <select id="especialidad" name="especialidad">
+            <option value="Alergología">Alergología</option>
+            <option value="Dermatología">Dermatología</option>
+            <option value="Cardiología">Cardiología</option>
+            <option value="Nutrición">Nutrición</option>
+        </select>
+        <br>
+        <label for="image">Imagen:</label>
+        <input type="file" id="image" name="image">
+
+        <button type="submit">Agregar Paciente</button>
+    </form>
+    <br>
+    <a href="/" class="btn-neon">
+        <span id="span1"></span>
+        <span id="span2"></span>
+        <span id="span3"></span>
+        <span id="span4"></span>
+        Regresar a la página de inicio
+    </a>
+</body>
+</html>

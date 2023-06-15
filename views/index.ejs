@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Lista de Pacientes</title>
+    <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Pacientes</h1>
+    </div>
+    <div>
+      <% if (pacientes.length > 0) { %>
+        <ul>
+          <% pacientes.forEach(function(paciente) { %>
+            <li class="contact">
+              <div>
+                <img class="contact-image" src="<%= paciente.image %>" alt="Imagen de contacto">
+              </div>
+              <div class="contact-details">
+                <span class="contact-name"><%= paciente.name %></span>
+                <span class="contact-email"><%= paciente.lastname %></span>
+                <br>
+                <a class="btn-neon" href="/contactos/<%= paciente._id %>">
+                  <span id="span1"></span>
+                  <span id="span2"></span>
+                  <span id="span3"></span>
+                  <span id="span4"></span>
+                  Detalles
+                </a>
+
+              </div>
+            </li>
+            <% }); %>
+          </ul>
+          <% } else { %>
+            <p>No hay contactos disponibles.</p>
+        <% } %>
+    </div>  
+    <div>
+      <a href="/agregar" class="btn-neon">
+        <span id="span1"></span>
+        <span id="span2"></span>
+        <span id="span3"></span>
+        <span id="span4"></span>
+        Agregar Paciente
+      </a>
+    </div>
+</body>
+</html>
